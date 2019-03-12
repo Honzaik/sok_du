@@ -18,9 +18,11 @@ Nechť \textbf{\textit{C}} je $[n,k,d]_{2}$ MDS kód, tedy $d=n-k+1$. Uvažujme 
 
 Pokud $k=1$, tak matice $C$ má pouze jeden řádek a aby byla splněna podmínka $d = n - 1 + 1$, tak v matici $A$ (která je vlastně řádkový vektor) musí být samé 1 (tedy i v $C$). Což znamená, že tento kód je triviální a je to opakovací kód. Tedy $[n,1,n]_{2}$ kód.
 
- V řádcích $C$ jsou kódová slova (prvky báze jsou také kódová slova), která musí splňovat, že jejich vzdálenost je $d$. Ale na prvních $k$ prvcích je jejich vzdálenost pouze 1, kvůli tomu, že $C$ obsahuje identickou matici, takže nezbývá nic jiného, než že v matici $A$ jsou samé jedničky, aby vzdálenost od nulového slova byla $d$. Pokud ale sečteme první 2 řádky matice $C$, tak z definice musí jejich součet být kódové slovo, ale to má právě 2 nenulové prvky, tedy $d \leq 2$.
+Předpokládejme nyní $k > 1$. V řádcích $C$ jsou kódová slova (prvky báze jsou také kódová slova), která musí splňovat, že jejich vzdálenost je $d$. Ale na prvních $k$ prvcích je jejich vzdálenost pouze 1, kvůli tomu, že $C$ obsahuje identickou matici, takže nezbývá nic jiného, než že v matici $A$ jsou samé jedničky, aby vzdálenost od nulového slova byla $d$. Pokud ale sečteme první 2 řádky matice $C$, tak z definice musí jejich součet být kódové slovo, ale to má právě 2 nenulové prvky, tedy musí platit $d \leq 2$.
 
-Celkem tedy máme $1 \leq d \leq 2$. Takže $k = n-1$ nebo $k = n$. Jediné možné binární MDS kódy jsou tedy
+Celkem tedy máme $1 \leq d \leq 2$. Takže $k = n-1$ nebo $k = n$. 
+
+Jediné možné binární MDS kódy jsou tedy
 \begin{itemize}
     \item $[n,1,n]_{2}$
     \item $[n,n,1]_{2}$
