@@ -1,0 +1,33 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst} %indentace prvního odstavce
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\begin{document}
+
+\section{}
+Nechť \textbf{\textit{C}} je $[n,k,d]_{2}$ MDS kód, tedy $d=n-k+1$. Uvažujme generující matici tohoto kódu ve standardním tvaru a označme jí $C = [I_{k}|A]$, kde $A$ je matice z $\mathbb{F}^{k \times (n-k)}_{2}$. Matice $A$ je díky tomu, že \textbf{\textit{C}} je MDS, typu $\mathbb{F}^{k \times (n-k)}_{2} = \mathbb{F}^{k \times (d-1)}_{2}$.
+
+%Pokud $k=n$, tak je to totální kód, a tudíž nikdy nemůže být 1-perfektní, jelikož 1-perfektní kód musí opravovat 1 chybu, tudíž $d > 2$, ale v případě totálního kódu $d=1$.
+
+%Předpokládejme $k<n$, takže $d=n-k+1 \geq 2$. %
+
+Pokud $k=1$, tak matice $C$ má pouze jeden řádek a aby byla splněna podmínka $d = n - 1 + 1$, tak v matici $A$ (která je vlastně řádkový vektor) musí být samé 1 (tedy i v $C$). Což znamená, že tento kód je opět triviální a je to opakovací kód. Tedy $[n,1,n]_{2}$ kód.
+
+ V řádcích $C$ jsou kódová slova (prvky báze jsou také kódová slova), která musí splňovat, že jejich vzdálenost je $d$. Ale na prvních $k$ prvcích je jejich vzdálenost pouze 1, kvůli tomu, že $C$ obsahuje identickou matici, takže nezbývá nic jiného, než že v matici $A$ jsou samé jedničky, aby vzdálenost od nulového slova byla $d$. Pokud ale sečteme první 2 řádky matice $C$, tak z definice musí jejich součet být kódové slovo, ale to má právě 2 nenulové prvky, tedy $d \leq 2$.
+
+Celkem tedy máme $1 \leq d \leq 2$. Takže $k = n-1$ nebo $k = n$. Jediné možné binární MDS kódy jsou tedy
+\begin{itemize}
+    \item $[n,1,n]_{2}$
+    \item $[n,n,1]_{2}$
+    \item $[n,n-1,2]_{2}$
+\end{itemize}
+
+My chceme ale 1-perfektní kódy, tedy $d > 2$. Tudíž jediný lineární kód co to splňuje je $[n,1,n]_{2}$, což je 2 prvkový opakovací kód $\textbf{\textit{C}}=\{000\dots0, 111\dots1\}$. Tento kód můžeme jednoduše upravit na nelineární přičtením jakéholiv nenulového vektoru k oboum vektorům této množiny.
+
+Nelineární zbytek???
+\end{document}
